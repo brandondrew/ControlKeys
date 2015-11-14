@@ -1,30 +1,29 @@
-Karabiner
-=========
+ControlKeys
+===========
 
-Karabiner is a powerful utility for keyboard customization.
+ControlKeys is a keyboard customization utility based on [Karabiner](https://pqrs.org/osx/karabiner).  If you are unfamiliar with Karabiner, you should check it out first.
 
-* Change the key mappings (For example, "Change Right Option to Enter")
-* Change the key repeat speed.
-* The revival of a lost NumPad key (Fn+jkluio789…)
-* Features for more efficient operations. (Emacs Mode, Vi Mode, Mouse Keys Mode, ...)
+What's wrong with Karabiner?
+----------------------------
 
-Prior to version 9.3.0, Karabiner was called *KeyRemap4MacBook*.
+Nothing is wrong with Karabiner.  It's a very impressive, very powerful, and very useful utility.
 
-Useful links
-------------
+Why did you fork Karabiner, then?
+---------------------------------
 
-* Latest build: https://pqrs.org/osx/karabiner/
-* Mirror: http://tekezo.github.io/pqrs.org/
-* Google Group: https://groups.google.com/forum/#!forum/osx-karabiner
+Karabiner offers *a huge number* of options built-in, many of which I do not find useful.  I wanted to clean up the interface and offer only what I see as the best options.  Because Karabiner (and therefore ControlKeys) is so flexible that it allows the end user to create any customizations they want, it is not necessary to build them all into the utility.  I believe many of them would be a better fit for a wiki or some other repository of customization XML files.
 
+Why rename your fork?  Why not just fork it and contribute back to the original project?
+----------------------------------------------------------------------------------------
 
-System requirements
--------------------
+Because my goals are different.  If I write anything useful to Karabiner, I'd be thrilled to have them adopt my changes.  But many of my changes are probably not interesting to them.  (All changes that I think may be interesting are intended to go in the branch named `karabiner`.)
 
-Karabiner works for all Mac products, including the MacBook series, iMac, Mac mini, and Mac Pro, with the requirement that the product runs OS X 10.9 (Mavericks) or higher.
+Karabiner can be thought of as though it has two parts:
 
-* If you require Karabiner for OS X 10.6 - 10.8, please use KeyRemap4MacBook 8.4.0.
-* If you require Karabiner for OS X 10.4 - 10.5, please use KeyRemap4MacBook 5.1.0.
+1. the application, which offers the ability to reconfigure your input devices, and
+2. a huge collection of configurations that you can apply or ignore, as you see fit.
+
+Each configuration is probably there because *somebody* found it useful, but in many cases there are just two many of them.  For instance, take all the different approaches to giving your computer a Vim mode that you can use outside of Vim.  Rather than many competing Vim modes, why not offer one carefully chosen Vim mode?&mdash;of course with a variety of settings for finer-grained control of how the mode works.  By offering a curated collection of the best configurations, I hope to end up with a leaner and more user-friendly utility.
 
 
 How to build
@@ -55,7 +54,7 @@ Extract the master.tar.gz file to "Karabiner-master" and delete the tar.gz file
     cd Karabiner-master
     make
 
-The `make` script will create a redistributable **Karabiner-VERSION.dmg** in the current directory.
+The `make` script will create a redistributable **ControlKeys-VERSION.dmg** in the current directory.
 
 
 **Note:**
